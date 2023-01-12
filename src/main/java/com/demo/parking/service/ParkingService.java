@@ -71,7 +71,7 @@ public class ParkingService {
         VehicleInfo vehicleInfo = vehicleInfoRepository.findById(vehicleId)
                 .orElseThrow(() -> new AccountNotFoundException("No Vehicle id found"));
         if(!vehicleInfo.getPaymentStatus()) {
-            return "paise bharo";
+            return "Please Pay";
         }
 
         Slots slots = slotsRepository.findById(Long.valueOf(1))
@@ -83,6 +83,6 @@ public class ParkingService {
         }
 
         slotsRepository.save(slots);
-        return "jao bhai, dubara fir ana";
+        return "Thank You Visit Again";
     }
 }
