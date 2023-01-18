@@ -28,6 +28,9 @@ public class ParkingService {
         this.paymentRepository = paymentRepository;
     }
 
+
+
+
     public Boolean slotsAvailable(VehicleType vehicleType) throws AccountNotFoundException {
 
         Slots slots = slotsRepository.findById(Long.valueOf(1))
